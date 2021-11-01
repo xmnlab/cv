@@ -17,6 +17,7 @@
 % character encoding
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\usepackage{float, graphicx}
 
 % adjust the page margins
 \usepackage[scale=0.85]{geometry}
@@ -24,15 +25,15 @@
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
-\name{Ivan}{Ogassavara}
-\title{Cientista de Datos}                               % optional, remove / comment the line if not wanted
+\name{Ivan}{Ogasawara}
+\title{Open Source Developer}                               % optional, remove / comment the line if not wanted
 % \address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 \phone[mobile]{+591 69757089}                   % optional, remove / comment the line if not wanted
 %\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
 %\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
 \email{ivan.ogasawara@gmail.com}                               % optional, remove / comment the line if not wanted
 \homepage{https://github.com/xmnlab/}                         % optional, remove / comment the line if not wanted
-\extrainfo{http://lattes.cnpq.br/7764277601641080}                 % optional, remove / comment the line if not wanted
+%\extrainfo{http://lattes.cnpq.br/7764277601641080}                 % optional, remove / comment the line if not wanted
 %\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 % \quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
@@ -53,8 +54,11 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
+\includegraphics[width=\linewidth]{./images/github.png}
+
 \section{Resumen}
-\cventry{}{Cientista de datos, analista y desarrollador de sistemas con experiencia en proyectos comerciales, gestión pública, ingeniería de transportes, etc. Experiencia en investigación científica, análisis de datos, detección de fenómenos, optimización de algoritmos, manipulación de datos georeferenciados y gestión de proyectos}{}{}{}{}{}
+\cventry{}{Analista y desarrollador de programas computacionales con experiencia en proyectos comerciales, gestión pública, ingeniería de transportes, etc. Experiencia en proyectos de investigación científica, análisis de datos, optimización de algoritmos, manipulación de datos georeferenciados y gestión de proyectos}{}{}{}{}{}
+
 
 \section{Educación}
 \cventry{2015--Interrumpida}{Posgrado en ingeniería de transportes y gestión territorial}{Universidade Federal de Santa Catarina}{Florianópolis/Brasil}{\textit{Maestría}}{}  % arguments 3 to 6 can be left empty
@@ -65,25 +69,24 @@
 
 \section{Experiencia Laboral}
 
-\cventry{2018--}{Desarrollador}{Quansight}{}{}{Actuación en el desarrollo de nuevas funcionalidades y correción de fallas, creación de documentación y paquetes de instalación de librería open source. Utilización y desarrollo con/de tecnologías como: Python, Conda, C++, Sphinx, JupyterLab, MapD, Ibis-project, Django, Django-Rest-Framework, GraphQL, Docker, Vue.js, React.js}
+\cventry{2018--}{Desarrollador en proyectos Open Source}{Quansight}{}{}{Actuación en areas de desarrollo, documentación, devops y/o empaquetamiento de software en proyectos open source como: pytorch, bibliotecas del ecosistema de Jupyter, Ibis, etc. Utilización y desarrollo con tecnologías como: Python, Conda/Conda Constructor, C++, JupyterLab, OmniSciDB, Ibis-Framework, Django, Django-Rest-Framework, GraphQL, Vue.js, Docker, Argo Workflow. Participación en el desarrollo de las fases iniciales del portal \url{openteams.com}.}
 
-\cventry{2016--2018}{Cientista de datos, analista y desarrollador de sistemas}{Independiente/Autónomo}{}{}{Análisis y visualización de datos; Análisis de  literaturas científicas para resolución de problemas; Análisis de librerías computacionales; Desarrollo de aplicaciones web para visualización interactiva de datos; Optimización de algoritmos; Manipulación de datos georeferenciados; Despliegue y configuración de servidor MapServer; Utilización de conceptos de Ciencia Abierta; Utilización de liberías y herramientas Python como: scipy, numpy, numba, pandas, matplotlib, bokeh, rasterio, fiona, jupyter, numexpr, django, flask, conda, etc; Utilización de base de datos PostgreSQL.\newline{}%
+\cventry{2016--2018}{Cientista de datos, analista y desarrollador de sistemas}{Independiente/Autónomo}{}{}{Análisis y visualización de datos; Análisis de  literaturas científicas para resolución de problemas; Desarrollo de aplicaciones web para visualización interactiva de datos; Optimización de algoritmos; Manipulación de datos georeferenciados; Despliegue y configuración de servidor MapServer; Utilización de bibliotecas y herramientas Python del stack científico, como: scipy, numpy, numba, pandas, matplotlib, bokeh, rasterio, fiona, jupyter, numexpr, django, flask, conda, etc; Utilización de base de datos PostgreSQL.\newline{}%
 \textbf{Participación en los proyectos:}%
 \begin{itemize}%
 \item Análisis de características visco-elásticas de pavimentos en ensayo en laboratorio;
-\item Visualización de incidencia y estimación de influenza en Brasil (\url{github.com/FluVigilanciaBR});
-\item Visualización de casos de dengue en Brasil (\url{github.com/AlertaDengue});
-\item Creación de paquetes conda de librerías R (\url{anaconda.org/GlaxoSmithKline});
-\item Desarrollo de la librería SciKit-Data. Su proposito es reducir el código repetitivo, reducir el tiempo dedicado a las tareas de análisis de datos y ofrecer un flujo de trabajo de análisis de datos reproducible (\url{github.com/OpenDataScienceLab/skdata}).
+\item Portal de visualización de incidencia y estimación de influenza en Brasil (\url{github.com/FluVigilanciaBR});
+\item Portal de visualización de casos de dengue en Brasil (\url{github.com/AlertaDengue});
+\item Creación de paquetes conda de bibliotecas en R (\url{anaconda.org/GlaxoSmithKline});
 \end{itemize}}
 
-\cventry{2015--2017}{Open Science and Weigh in Motion Research(OpenWIM)}{Independent Researcher}{}{}{La propuesta del proyecto OpenWIM es crear un entorno digital abierto para apoyar al investigadores del tema de pesaje en movimiento de vehículos pesados (WIM) y mejorar sus prácticas en sus investigaciones por medio de los conceptos de ciencia abierta y por la creación de liberías computaciones basadas en las literaturas de este campo de investigación (\url{github.com/OpenWIM}).}
+\cventry{2015--2017}{Open Science and Weigh in Motion Research(OpenWIM)}{Independent Researcher}{}{}{La propuesta del proyecto OpenWIM es crear un entorno digital abierto para apoyar al investigadores del tema de pesaje en movimiento de vehículos pesados (WIM) y mejorar sus prácticas en sus investigaciones por medio de los conceptos de ciencia abierta y por la creación de bibliotecas computaciones basadas en las literaturas de este campo de investigación (\url{github.com/OpenWIM}).}
 
-\cventry{2013--2016}{Analista de Sistemas}{Fundação de Amparo a Pesquisa e Extensão Universitária (FAPEU)}{Florianópolis/Brasil}{}{Participación en proyecto de investigación de pesaje en movimiento de vehículos pesados y desarrollo de algoritmos para análisis de características visco-elásticas de pavimento; Actividades desarrolladas: adquisición de datos eléctricos de sensores, procesamiento digital de señales, análisis estadística, aprendizaje automático de máquina, técnicas de optimización de rendimiento, etc.}
+\cventry{2013--2016}{Analista de Sistemas}{Fundação de Amparo a Pesquisa e Extensão Universitária (FAPEU)}{Florianópolis/Brasil}{}{Participación en proyecto de investigación de pesaje en movimiento de vehículos pesados y desarrollo de algoritmos para análisis de características visco-elásticas de pavimento; Actuación en actividades como: adquisición de datos eléctricos de sensores, procesamiento digital de señales, análisis estadística, aprendizaje automático de máquina, técnicas de optimización de rendimiento, etc.}
 
 \cventry{2011--2013}{Analista Programador de Sistemas}{Cetil Sistemas de Informática S/A, CETIL}{Florianópolis/Brasil}{}{Análisis y desarrollo de sistemas para administración pública.}
 
-\cventry{2011--2011}{Analista de Sistemas}{Victory Consulting (VICTORY)}{São Paulo/Brasil}{}{Desarrollo de herramientas de apoyo a la gestión de de planes de seguros médicos y calidad de vida.}
+\cventry{2011--2011}{Analista de Sistemas}{Victory Consulting (VICTORY)}{São Paulo/Brasil}{}{Desarrollo de herramientas de apoyo a la gestión de seguros de salud y calidad de vida.}
 
 \cventry{2010--2010}{Representante Internacional}{ECELA Spanish Language Schools (ECELA)}{Santiago/Chile}{}{Venta de cursos de inmersión en español en Chile, Argentina y Perú; traducción de materiales publicitarios; desarrollo de páginas WEB.}
 
@@ -95,24 +98,25 @@
 
 \cventry{2005--2005}{Instructor}{Colégio e Faculdade ENIAC (ENIAC)}{Guarulhos/Brasil}{}{Profesor sustituto en disciplinas de tecnología de pregrado. Profesor en clases prácticas en curso técnico en informática.}
 
-\cventry{2005--2005}{Analista de Sistemas Jr}{Vemac Comércio e Serviços LTDA - ME (VEMAC)}{São Paulo/Brasil}{}{Análisis y desarrollo de sistemas para unidades básicas de salud.}
+\cventry{2005--2005}{Analista de Sistemas}{Vemac Comércio e Serviços LTDA - ME (VEMAC)}{São Paulo/Brasil}{}{Análisis y desarrollo de sistemas para unidades básicas de salud.}
 
-\cventry{2002--2004}{Técnico en Informática}{Colégio Eniac (ENIAC)}{Guarulhos/Brasil}{}{Desarrollo de sistemas y sitios WEB para gestión escolar.}
+\cventry{2002--2004}{Analista y desarrollador de sistemas}{Colégio Eniac (ENIAC)}{Guarulhos/Brasil}{}{Desarrollo de sistemas y sitios WEB para gestión escolar.}
 
-\cventry{2002--2002}{Técnico en Informática}{QualityWay (QUALITY WAY)}{São Paulo/Brasil}{}{Desarrollo de sistema interno para gestión de proyectos de auditoría en gestión de recursos y procesos de calidad.}
-
-\cventry{1999--1999}{Profesor auxiliar en clases de informática básica}{Instituto Data Brasil de Educação Profissional (DATABRASIL)}{Guarulhos/Brasil}{}{}
+\cventry{2002--2002}{Analista y desarrollador de Sistemas}{QualityWay (QUALITY WAY)}{São Paulo/Brasil}{}{Desarrollo de sistema interno para gestión de proyectos de auditoría en gestión de recursos y procesos de calidad.}
 
 \section{Eventos realizados}
-\cventry{2017--}{Meetups comunidad Python La Paz}{Mantenedor}{}{}{Los meetups realizados en la comunidad Python La Paz tienen como objetivos la difusión de la tecnología Python y la integración entre estudiantes, profesores, desarroladores y empresas que se dedican a este lenguaje.}
+
+\cventry{2021--}{Meetups comunidad Open Science Labs}{Organizador}{}{}{Los meetups de la comunidad Open Science Labs tienen como objectivo la difusión de temas como Ciencia Abierta, Código Abierto, Acceso Abierto y herramientas computacionales.}
+
+\cventry{2017--2019}{Meetups comunidad Python La Paz}{Organizador}{}{}{Los meetups realizados en la comunidad Python La Paz tienen como objetivos la difusión de la tecnología Python y la integración entre estudiantes, profesores, desarroladores y empresas que se dedican a este lenguaje.}
 
 \cventry{2015--2016}{4a Conferencia SciPy Latin America}{Presidente}{}{}{La conferencia, realizada entre 16 y 20 de mayo de 2016, tuvo como objetivo fomentar: la ciencia; la adopción de la informática como herramienta de estudio científico y; el uso de Python como principal herramienta informática en la ciencia}
 
 \section{Languages}
 \cvitemwithcomment{Portugués}{Nativo}{}
 \cvitemwithcomment{Español}{Fluído}{}
-\cvitemwithcomment{Inglés}{Intermedio}{Buena lectura, buena comprensión auditiva, escritura técnica}
-\cvitemwithcomment{Italiano}{Básico}{Buena lectura, buena comprensión auditiva}
+\cvitemwithcomment{Inglés}{Avanzado}{}
+\cvitemwithcomment{Italiano}{Básico}{}
 
 %Portugués (Nativo) - Español (Fluente) - Inglés (Intermedio) - Italiano  (Intermedio).
 
@@ -126,8 +130,10 @@
 %\cvitem{hobby 2}{Description}
 %\cvitem{hobby 3}{Description}
 
-\section{Cursos complementarios}
+\section{Certificados}
 
+\cvlistitem{Compilers. edX/Stanford (2021) }
+\cvlistitem{Leading With Effective Communication, Inclusive Leadership Training. edX/Catalyst (2021)}
 \cvlistitem{Parallel Computing with Dask. DataCamp (2018)}
 \cvlistitem{Deep Learning in Python. DataCamp (2018)}
 \cvlistitem{Machine Learning with Python. DataCamp (2018)}
