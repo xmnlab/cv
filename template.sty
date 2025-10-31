@@ -1,0 +1,76 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{template}[2025/10/31 Clean professional CV style]
+
+\RequirePackage[a4paper,margin=1.9cm]{geometry}
+\RequirePackage{iftex}
+
+% ---- Fonts (pdfLaTeX fallback) ----
+\ifPDFTeX
+  \RequirePackage[T1]{fontenc}
+  \RequirePackage[utf8]{inputenc}
+  \RequirePackage{lmodern}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \RequirePackage{fontspec}
+  \IfFontExistsTF{Inter}{\setmainfont{Inter}}{\setmainfont{Latin Modern Sans}}
+\fi
+
+\RequirePackage[final]{microtype}
+\RequirePackage{parskip}    % sane paragraph spacing (no indents)
+\RequirePackage{ragged2e}
+\RequirePackage{tabularx}
+\RequirePackage{array}
+\RequirePackage{enumitem}
+\RequirePackage{titlesec}
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage[dvipsnames]{xcolor}
+
+% ---- Colors ----
+\definecolor{Primary}{HTML}{0F4C81}
+\definecolor{Muted}{HTML}{6B7280}
+\colorlet{Rule}{Primary}
+
+\hypersetup{colorlinks=true,linkcolor=Primary,urlcolor=Primary}
+
+% ---- Lists & spacing ----
+\setlist[itemize]{leftmargin=*,topsep=2pt,itemsep=2pt}
+\setlist[enumerate]{leftmargin=*,topsep=2pt,itemsep=2pt}
+\setlength{\tabcolsep}{0pt}
+
+% ---- Section headings ----
+\titleformat{\section}{\large\bfseries\color{Primary}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+
+% ---- Header macros ----
+\newcommand{\cvname}[1]{\par\noindent{\fontsize{24}{26}\selectfont\bfseries #1}\par}
+\newcommand{\cvtagline}[1]{\noindent{\color{Muted} #1}\par}
+\newcommand{\cvrule}{\noindent\color{Rule}\rule{\linewidth}{0.8pt}\par\vspace{2pt}}
+
+% Header environment: left (name+tagline), right (contact block)
+\newenvironment{cvheader}[3]{% #1 name, #2 tagline, #3 right block
+  \noindent
+  \begin{tabularx}{\linewidth}{@{}X>{\raggedleft\arraybackslash}p{0.48\linewidth}@{}}
+    \begin{minipage}[t]{0.50\linewidth}
+      \cvname{#1}
+      \cvtagline{#2}
+    \end{minipage}
+    &
+    \begin{minipage}[t]{\linewidth}
+      \raggedleft\small #3
+    \end{minipage}
+  \end{tabularx}
+  \vspace{-2pt}\cvrule
+}{}
+
+% ---- Helper: contacts with separators ----
+\newcommand{\contactitem}[2]{\textbf{#1}\, #2}
+\newcommand{\sep}{\ \textcolor{Muted}{•}\ }
+
+% ---- Entry macro (role line) ----
+% Usage: \Entry{Role}{Org}{Dates}{Location(optional)}
+\newcommand{\Entry}[4]{%
+  \noindent\textbf{#1} \textcolor{Muted}{@ #2}\hfill{\small #3\ifx&#4&\else\ \textcolor{Muted}{· #4}\fi}\par
+}
+
+% Tight bullets for responsibilities/impact
+\newenvironment{tightitemize}{\begin{itemize}[leftmargin=*,topsep=2pt,itemsep=2pt]}{\end{itemize}}
