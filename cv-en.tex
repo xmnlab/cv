@@ -1,109 +1,134 @@
 \documentclass[10pt,a4paper]{article}
 \usepackage{template}
 
-\pagestyle{empty}
+% Footer contact
+\SetFooter{+591 69757089}{me@ivanogasawara.com}{La Paz, Bolivia}
 
 \begin{document}
-\begin{cvheader}
-  {Ivan Ogasawara}
-  {Open Source Developer · Research Software Engineer · Data Scientist}
-  {
-    \contactitem{Email}{\href{mailto:ivan.ogasawara@gmail.com}{ivan.ogasawara@gmail.com}} \sep
-    \contactitem{LinkedIn}{\href{https://www.linkedin.com/in/ivan-ogasawara/}{linkedin.com/in/ivan-ogasawara}}
-  }
-\end{cvheader}
 
-\section{Summary}
-With 22+ years in software development, I build reliable data and platform tooling across backend, DevOps, and ML. I contribute to ecosystems like PyTorch, Ibis, and Jupyter; lead open-source initiatives; and apply modern DS/ML (and LLVM/compilers) to real-world problems in public health and engineering. I mentor engineers and students, and invest continuously in personal and professional growth.
+\StartCVColumns
 
-\section{Core Competencies}
-Python, C++, JavaScript · Django, DRF, Flask · Docker, CI/CD, Ansible · PostgreSQL, Elasticsearch ·
-LLMs/OpenAI, RAG, LLVM · Data pipelines, analytics, visualization
+% -------- LEFT COLUMN --------
+% (Add your photo if you want)
+% \Photo[4.0cm]{photo.jpg}
 
-\section{Selected Achievements}
+\LeftSection{My Profile}
+\small
+Research Software Engineer and tech leader with 22+ years in software engineering. Across my career I've delivered backend systems, data platforms, DevOps/packaging workflows, and, more recently, ML/RAG and LLVM/compilers work.
+
+I contribute by designing robust systems, applying best practices, improving team collaboration, adopting open-source technologies, and authoring libraries and tools. Polyglot background: I've contributed to projects using Python, C/C++, JavaScript, Java, R, Rust, Bash, PHP, VB6, ASP, ActionScript, etc., and I'm comfortable learning new languages and stacks as needed.
+
+Founder of Open Science Labs; mentor for internships and Google Summer of Code; Advisor at pyOpenSci; Steering Committee member, Open Science Framework - Open Source Community.
+\normalsize
+
+
+\LeftSection{Skills}
+\small
+\textbf{Hard skills}
 \begin{tightitemize}
-  \item Led multi-project OSS programs: CI/CD, containerized stacks, and search/data services at scale.
-  \item Mentorship: 4 GSoC projects completed; 7 internship projects delivered; secured 3 PSF microgrants.
-  \item Architected RAG and ML workflows (Django/Celery/Elasticsearch), improving retrieval quality and reliability.
-  \item Active educator: TA roles in Python, Data Science, and analytics tooling (Pandas, Plotly, Quarto).
+  \item Programming: Arx, Python, C/C++, JS; also Java, R, Rust, Bash, PHP, VB6, ASP, ActionScript.
+  \item Backend \& APIs: Django, DRF, Flask; task queues (Celery); packaging \& release workflows.
+  \item Data \& ML: pandas, scikit-learn; RAG; visualization (Plotly/Bokeh).
+  \item DevOps: Docker; CI/CD (GitHub Actions); Makim, Sugar, Ansible.
+  \item Databases \& Search: PostgreSQL; Elasticsearch.
+  \item Compilers: LLVM; ASTx, IRx, Arx.
 \end{tightitemize}
 
-\section{Experience (last 10 years)}
-
-\Entry{Teaching Assistant}{WorldQuant University}{2024--Present}{Part-time}
+\textbf{Soft skills}
 \begin{tightitemize}
-  \item Applied Data Science Lab: database management, data cleaning, regression/classification, visualization, ML ethics, BI.
+  \item Technical leadership; team coaching; code review \& standards.
+  \item Mentoring (internships, Google Summer of Code).
+  \item Architecture \& strategy; documentation; reproducibility practices.
+  \item Community building; open-source governance (pyOpenSci Advisor; OSF Open Source Community Steering Committee).
+  \item Workshop facilitation \& teaching assistant.
 \end{tightitemize}
 
-\Entry{Teaching Assistant}{The GRAPH Courses}{2024--Present}{Part-time}
+\textbf{Languages}
 \begin{tightitemize}
-  \item \emph{Python Basics and Beyond}: fundamentals, pandas, Plotly, Quarto dashboards, GitHub workflows.
+  \item Portuguese (Native)
+  \item Spanish (Fluent)
+  \item English (Advanced)
+  \item Italian (Basic)
 \end{tightitemize}
 
-\Entry{Executive Director}{Open Science Labs (OSL)}{2015--Present}{Part-time}
+\RightSection{Teaching, Training \& Workshops}
 \begin{tightitemize}
-  \item Founded incubator and OSS internship programs; coordinated roadmaps and community events.
-  \item Managed 10+ active incubations and 3 affiliates; mentored contributors; secured 3 PSF grants.
-  \item Tech lead across Makim, Sugar, ArxLang, SciCookie, Envers, Anamnesis.ai (DevOps, compilers, automation).
+  \item Mentoring: Open Source projects, Compilers, DevOps, Health Care systems, packaging, CI/CD.
+  \item Training: Python \& data science foundations.
+  \item Programs: Internship \& GSoC mentorship;
+  \item Events: Conference organization and facilitation.
 \end{tightitemize}
 
-\Entry{Research Software Engineer}{The GRAPH Network / LiteRev}{2023--Present}{Part-time}
+\normalsize
+
+% -------- RIGHT COLUMN --------
+\switchcolumn
+
+\NameBlock{Ivan Ogasawara}{Research Software Engineer, Tech Leader,  Executive Lead}
+
+\RightSection{Experience}
+
+\ExpHead{Teaching Assistant}{WorldQuant University — Applied Data Science Lab (Remote)}{2024--Present}
 \begin{tightitemize}
-  \item Tech \& Team Lead, Software Architect, DevOps for literature review tooling (Python, Django, scikit-learn, pacmap, optuna,
-        hdbscan, bokeh, Celery, Docker, CI/CD).
+  \item Support learners in WQU's Applied Data Science Lab.
+  \item Coach students through \emph{eight} end-to-end projects covering data wrangling, visualization, regression/ML pipelines, time series, and database/API access; promote collaboration and use of live office hours.
+  \item Guide Python/pandas and scikit-learn workflows; reinforce SQL/MongoDB/API data access, model evaluation, and clear communication of results.
 \end{tightitemize}
 
-\Entry{Research Software Engineer}{The GRAPH Network}{2022--2023}{Part-time}
+\ExpHead{Instructor — Python Basics \& Beyond: Intro to Data Analysis with Python}{The GRAPH Courses (Remote)}{2024--Present}
 \begin{tightitemize}
-  \item Server admin and service enablement; trainings on Git/Python; OSS best practices and architecture
-        (Python, R, Docker, PostgreSQL, Ansible, Nginx, Superset, conda packaging).
+  \item Teach a live bootcamp covering Python foundations, pandas, Plotly, Quarto dashboards, and Git/GitHub.
+  \item Lead weekly workshops and code reviews; mentor projects using industry/research datasets and support capstone/portfolio work.
 \end{tightitemize}
 
-\Entry{Software Developer}{Inlyse}{2022--2023}{Part-time}
+\ExpHead{Teaching Assistant — Generative AI for Work \& Research}{The GRAPH Courses (Remote)}{2024--Present}
 \begin{tightitemize}
-  \item Lead developer of customer platform (license management, Stripe billing); data tooling for ML pipelines
-        (Python, C++, Bash, JS, Ansible, Django, Docker, CI/CD, Stripe).
+  \item Support an 8-week, hands-on program on no-code AI tools to automate content, research, data analysis, and knowledge-management workflows.
+  \item Facilitate workshops/help sessions on practical tool use (docs/spreadsheets/data automation; literature tools; custom chatbots/RAG); coach capstone projects.
 \end{tightitemize}
 
-\Entry{Software Developer}{Quansight / OSBIG}{2018--2021}{Part-time}
+\ExpHead{Founder \& Executive Director}{Open Science Labs}{2015--Present}
 \begin{tightitemize}
-  \item Contributions: PyTorch, Ibis-framework, Jupyter, OmniSciDB; client work in Django/DRF, asyncio, Docker, GraphQL, Argo.
-  \item DEI committee; organized weekly compilers sessions.
+  \item Built a supportive global community with study groups, resources, events, and contributor pathways.
+  \item Launched Project Incubator \& Affiliation program; mentored interns and GSoC contributors across several countries.
 \end{tightitemize}
 
-\Entry{Software Packager}{Anaconda, Inc.}{2017}{Contract}
+\ExpHead{Research Software Engineer (Tech \& Team Lead)}{The GRAPH Network / LiteRev}{2023--Present}
 \begin{tightitemize}
-  \item Conda packaging for Python, R, and Java libraries.
+  \item Literature-review platform: Python, Django, scikit-learn, pacmap, optuna, hdbscan, bokeh, Celery, Docker, CI/CD.
 \end{tightitemize}
 
-\Entry{Research Software Engineer}{Fiotec}{2016--2017}{Contract}
+\ExpHead{Software Developer}{Quansight / OSBIG}{2018--2021}
 \begin{tightitemize}
-  \item Influenza and dengue visualization/estimation portals (Python, pandas, bokeh, Django/Flask, GIS, PostgreSQL, Docker).
+  \item Contributions to PyTorch, Ibis-framework, Jupyter, OmniSciDB; client work in Django/DRF, asyncio, Docker, GraphQL, Argo.
 \end{tightitemize}
 
-\Entry{Research Software Engineer}{Fapeu}{2016}{Contract}
+\ExpHead{Software Packager}{Anaconda, Inc. (Contract)}{2017}
 \begin{tightitemize}
-  \item Web system for visco-elastic pavement analysis in lab tests.
+  \item Conda packaging for Python, R, and Java libraries; reproducible builds and dependency pinning.
 \end{tightitemize}
 
-\Entry{Research Software Engineer}{Fapeu}{2013--2016}{Full-time}
+\ExpHead{Research Software Engineer}{Fundação para o Desenvimento Científico e Tecnológico em Saúde — Fiotec (Contract)}{2016--2017}
 \begin{tightitemize}
-  \item Literature analysis in transportation engineering; DSP/ML/HPC for WIM, fatigue, complex modulus.
+  \item Built portals for visualization and estimation of influenza and dengue incidence in Brazil.
+  \item Stack: Python, JavaScript, pandas, Bokeh, Django/Flask, Fiona, Rasterio, PostgreSQL, MapServer, Docker.
 \end{tightitemize}
 
-\section{Open-Source Contributions (selected)}
-PyTorch · Ibis-framework · Jupyter ecosystem · Internal tools for DevOps, compilers, automation (LLVM, Docker, PostgreSQL, OpenAI API)
+\ExpHead{Research Software Engineer}{Fapeu — Fundação de Amparo a Pesquisa e Extensão Universitária (Contract)}{2016}
+\begin{tightitemize}
+  \item Web system for laboratory analysis of visco-elastic pavement characteristics.
+\end{tightitemize}
 
-\section{Education}
-\textbf{Transportation Engineering} — Master’s (interrupted), UFSC (2015–2016) \\
-\textbf{Information Technology} — Post-Grad (Lato Sensu), Eniac (2004–2005) \\
-\textbf{Database Technology} — Associate’s Degree, Eniac (2003–2004)
+\ExpHead{Research Software Engineer}{Fapeu — Fundação de Amparo a Pesquisa e Extensão Universitária (Florianópolis, Brazil · Full-time)}{2013--2016}
+\begin{tightitemize}
+  \item Literature analysis in transportation engineering (WIM, fatigue, complex modulus).
+  \item Implemented DSP/ML/HPC workflows for data processing and modeling.
+\end{tightitemize}
 
-\section{Certifications (selected)}
-Compilers (edX/Stanford) · Inclusive Leadership (edX/Catalyst) · Parallel Computing with Dask (DataCamp) ·
-Deep Learning / ML with Python (DataCamp) · Applied Biostatistics (Osaka Univ/edX) · Hadoop/MapReduce (Udacity)
+\RightSection{Education}
+\EduEntry{Transportation Engineering — Master's (interrupted)}{Universidade Federal de Santa Catarina (UFSC)}{2015--2016}
+\EduEntry{Information Technology — Post-Grad (Lato Sensu)}{Faculdade Eniac}{2004--2005}
+\EduEntry{Database Technology — Associate's Degree}{Faculdade Eniac}{2003--2004}
 
-\section{Languages}
-Portuguese (Native) · Spanish (Fluent) · English (Advanced) · Italian (Basic)
-
+\EndCVColumns
 \end{document}
