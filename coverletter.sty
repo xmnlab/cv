@@ -1,0 +1,63 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{coverletter}[2025/10/31 Minimal professional cover letter style]
+
+% ---- Core (pdfLaTeX first) ----
+\RequirePackage[a4paper,top=2.0cm,bottom=2.0cm,left=2.0cm,right=2.0cm]{geometry}
+\RequirePackage{iftex}
+\ifPDFTeX
+  \RequirePackage[T1]{fontenc}
+  \RequirePackage[utf8]{inputenc}
+  \RequirePackage{lmodern}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \RequirePackage{fontspec}
+  \setmainfont{Latin Modern Sans}
+\fi
+\RequirePackage[final]{microtype}
+\RequirePackage{parskip}
+\RequirePackage{ragged2e}
+\RequirePackage{tabularx}
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage[dvipsnames]{xcolor}
+
+% ---- Colors ----
+\definecolor{Primary}{HTML}{111827} % near-black
+\definecolor{Muted}{HTML}{6B7280}
+
+% ---- Header ----
+\newcommand{\CLHeader}[4]{% name, tagline, left-contact, right-contact
+  {\Large\bfseries #1}\par
+  {\color{Muted} #2}\par\vspace{6pt}
+  \color{Primary}\hrule height 0.6pt\color{black}\vspace{6pt}
+  \noindent
+  \begin{tabularx}{\linewidth}{@{}X>{\raggedleft\arraybackslash}X@{}}
+    \begin{minipage}[t]{\linewidth}\small #3\end{minipage} &
+    \begin{minipage}[t]{\linewidth}\raggedleft\small #4\end{minipage}
+  \end{tabularx}
+  \vspace{14pt}
+}
+
+% ---- Blocks ----
+\newcommand{\CLRecipient}[3]{% org, address (single or multi-line), date
+  {\bfseries #1}\par
+  #2\par\vspace{6pt}
+  #3\par\vspace{14pt}
+}
+\newcommand{\CLSubject}[1]{\textbf{Re:} #1\par\vspace{10pt}}
+\newcommand{\CLSignoff}[3]{% closing, name, contact-footnote (optional)
+  \vspace{10pt}#1,\par\vspace{16pt}\textbf{#2}\par
+  {\small\color{Muted} #3}
+}
+
+% ---- Body typography ----
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+\RaggedRight
+
+% ---- Minimal, left-aligned header (no table, no split columns) ----
+% Args: 1) Name, 2) Tagline, 3) One-line contacts
+\newcommand{\CLHeaderMinimal}[3]{%
+  {\Large\bfseries #1}\par
+  {\color{Muted} #2}\par
+  {\small #3}\par\vspace{12pt}
+}
